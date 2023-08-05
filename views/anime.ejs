@@ -1,0 +1,49 @@
+<%- include("partials/header.ejs") %>
+    <div class="container">
+        <h1>Let's find a good show for you to watch! </h1>
+
+        <ul>
+        <form action="/anime" id="form" class="form" method="POST">
+            <li><input type="checkbox" name="genre[]" value="25">Shoujo</option></li>
+            <li><input type="checkbox" name="genre[]" value="22">Romance</option></li>
+            <li><input type="checkbox" name="genre[]" value="10">Fantasy</option></li>
+            <li><input type="checkbox" name="genre[]" value="19">Music</option></li>
+            <li><input type="checkbox" name="genre[]" value="23">School</option></li>
+            <li><input type="checkbox" name="genre[]" value="36">Slice of Life</option></li>
+            <li><button type="submit" class="form-submit">Search</button></li>
+        </form>
+        </ul>
+    </div>
+
+    <section id="cards" class="cards">
+        <% if(locals.data) { %>
+            <% data.forEach(function (element) { %>
+        <article class="card-item">
+          <h2 class="card-activity">
+            <!-- Show title -->
+            <p><%= element.title %></p>
+          </h2>
+          <div class="card-info">
+            <span class="card-type">
+              <!-- Show synopsis -->
+              <p><%= element.synopsis %></p>
+            </span>
+            <span class="card-participants">
+              <!-- Show show image -->
+              <img src=<%= element.images.jpg.small_image_url %> alt=<%= element.title %>>
+              <span class="card-number"></span>
+            </span>
+          </div>
+        </article>
+        <% }) %>
+      <% } %>
+  
+      <!-- Show any errors that were sent from the backend -->
+      <% if(locals.error) { %>
+        <div id="tag-error" class="tag-error">
+            <%= error %>
+        </div>
+        <% } %>
+  
+      </section>
+<%- include("partials/footer.ejs") %>
