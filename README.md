@@ -2,7 +2,7 @@
 Welcome to the Chill Watchlist Recommendations App! This Node.js and Express.js application with EJS templating allows users to find popular shows and books using the Jikan API and provides personalized recommendations when they want something to do to relax.
 
 ## Introduction
-Feeling stressed and need something relaxing to unwind? The Chill and Relax Recommendations App is here to help you discover popular shows and books that can help you relax, have fun, and take your mind off your worries. The app leverages the Jikan API, which provides data on anime and manga, to curate a list of chill and soothing recommendations for you to enjoy.
+Feeling stressed and need something relaxing to unwind? The app is here to help you discover popular shows and books that can help you relax, have fun, and take your mind off your worries. The app leverages the Jikan API, which provides data on anime and manga, to curate a list of chill and soothing recommendations for you to enjoy.
 
 ## Features
 - Browse through a list of popular shows and books
