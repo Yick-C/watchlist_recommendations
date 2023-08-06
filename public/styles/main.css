@@ -38,6 +38,10 @@ footer {
     justify-content: center;
     align-items: center;
   }
+  #homeImg {
+    height:100%;
+    width: 100%;
+  }
   /* ------------ */
   ul {
     list-style-type: none
@@ -92,6 +96,13 @@ footer {
   .card-activity {
     line-height: 1.2;
     margin-top: 10px;
+  }
+  .card-synopsis {
+    line-height: 1.2;
+    margin-top: 10px;
+  }
+  .card-image {
+    display: inline-block;
   }
   .tag-error {
     width: 100%;
